@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char s[1000];  // Assuming the max length of the string is 1000
+    int freq[10] = {0};  // Array to store frequency of digits (0-9)
+
+    scanf("%s", s);  // Read the input string
+
+    for (int i = 0; i < strlen(s); i++) {
+        if (s[i] >= '0' && s[i] <= '9') {  
+            freq[s[i] - '0']++;  // Convert char to int and increase count
+        }
+    }
+
+    // Print frequency of each digit (0-9)
+    for (int i = 0; i < 10; i++) {
+        printf("%d ", freq[i]);
+    }
+    
+    return 0;
+}

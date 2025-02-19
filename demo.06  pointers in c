@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+// Function to update the values
+void update(int *a, int *b) {
+    int sum = *a + *b;    // Calculate sum
+    int diff = abs(*a - *b); // Calculate absolute difference
+
+    *a = sum;    // Update the value of a
+    *b = diff;   // Update the value of b
+}
+
+int main() {
+    int a, b;
+    int *pa = &a, *pb = &b;
+
+    // Read the input values
+    scanf("%d %d", &a, &b);
+    
+    // Call the update function
+    update(pa, pb);
+
+    // Print the updated values
+    printf("%d\n%d", a, b);
+
+    return 0;
+}
